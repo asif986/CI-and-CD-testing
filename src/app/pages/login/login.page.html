@@ -12,9 +12,7 @@
             <div class="inputbox">
 
                 <div class="icondiv">
-                    <ion-img style="width: 75%;
-      padding-inline: 6px;
-      margin-inline: 4px;" src="assets/icon/username.svg"></ion-img>
+                    <ion-img src="assets/icon/username.svg"></ion-img>
 
                 </div>
                 <div class="inputdiv">
@@ -24,10 +22,8 @@
                 <!-- <ion-label color="primary" position="floating">Name</ion-label> -->
             </div>
             <div class="inputbox">
-                <div class="icondiv">
-                    <ion-img style="width: 65%;
-      padding-inline: 6px;
-      margin-inline: 4px;" src="assets/icon/password.svg"></ion-img>
+                <div class="icondiv" style="padding-inline: 15px">
+                    <ion-img src="assets/icon/password.svg"></ion-img>
 
                 </div>
                 <div class="inputdiv">
@@ -41,15 +37,21 @@
                 <ion-col size="12">
                     <div class="btn-width">
                         <ion-button (click)="login(form)" style="width: 282px;" [disabled]="form.invalid" color="dark" expand="block" shape="round">
-                            Login
+                            <ion-text color="primary">
+                                <b>
+
+                                    Login
+                                </b>
+                            </ion-text>
                         </ion-button>
                     </div>
                 </ion-col>
             </ion-row>
             <ion-row>
-                <ion-col size="12">
-
-                    <ion-img class="bottom-img" src="assets/images/bottomImg.jpg"></ion-img>
+                <ion-col>
+                    <div class="bottom-img-container">
+                        <ion-img src="assets/images/bottomImg.jpg"></ion-img>
+                    </div>
                 </ion-col>
             </ion-row>
         </div>
