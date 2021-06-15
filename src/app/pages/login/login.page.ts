@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage implements OnInit ,OnDestroy{
 email:string;
 password:string;
 
@@ -18,6 +18,9 @@ password:string;
   login(form:NgForm)
   {
     console.log("hii")
+  }
+  ngOnDestroy(){
+    
   }
 
 }

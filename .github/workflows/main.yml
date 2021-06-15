@@ -1,0 +1,27 @@
+name: GitHub Action for Firebase
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Run Tests
+        run: npm run test
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2.0.0
+
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: 1//0g3fssOqR6XfCCgYIARAAGBASNwF-L9IrBvaL5LkWZaYPe-biqdVUTOIHXr6nHBM_bUA6KH0Gq_u8CNOXcr9FDbf-KQmFu46oiVo
