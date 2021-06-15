@@ -1,9 +1,12 @@
 <ion-content>
 
     <div class="brand-logo-container">
-        <ion-avatar>
+        <div>
+            <!-- <ion-avatar> -->
             <img src="assets/logo.png" />
-        </ion-avatar>
+            <!-- </ion-avatar> -->
+        </div>
+
     </div>
     <form #form="ngForm">
 
@@ -37,7 +40,7 @@
                 <ion-col size="12">
                     <div class="btn-width">
                         <ion-button (click)="login(form)" style="width: 282px;" [disabled]="form.invalid" color="dark" expand="block" shape="round">
-                            <ion-text color="primary">
+                            <ion-text color="">
                                 <b>
 
                                     Login
