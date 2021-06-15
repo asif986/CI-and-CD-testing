@@ -3,7 +3,7 @@ name: GitHub Action for Firebase
 on:
   push:
     branches:
-      - refactor
+      - main
 
 jobs:
   build:
